@@ -1,0 +1,15 @@
+{
+  "name": "clerksy",
+  "version": "1.0.0",
+  "description": "Running the show has never been so easy.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tailwindcss -i ./input.css -o ./css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
