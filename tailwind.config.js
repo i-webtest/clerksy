@@ -18,6 +18,12 @@ module.exports = {
       borderRadius: {
         rBtn: '160px',
       },
+
+      screens: {
+        sm: '520px',
+        md: '768px',
+        lg: '1024px',
+      },
     },
   },
   plugins: [],
