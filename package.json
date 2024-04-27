@@ -4,7 +4,8 @@
   "description": "Running the show has never been so easy.",
   "main": "index.js",
   "scripts": {
-    "start": "npx tailwindcss -i ./input.css -o ./css/style.css --watch"
+    "start": "npx tailwindcss -i ./input.css -o ./css/style.css --watch",
+    "build": "npx tailwindcss -o build.css --minify"
   },
   "keywords": [],
   "author": "",
