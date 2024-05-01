@@ -2,20 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="icon" type="image/png+xml" href="img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="gsap/gsap.min.js" defer></script>
+    <script src="gsap/ScrollTrigger.min.js" defer></script>
+    <script src="index.js" defer></script>
+
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="build.css" /> -->
+
     <title>Clerksy</title>
   </head>
   <body>
     <header class="bg-bgMain text-white py-5">
-      <div
-        class="container px-[16px] mx-auto flex justify-between items-center max-w-[1284px] md:px-[32px] lg:px-[52px]"
-      >
-        <img class="w-[90px] sm:w-28 md:w-32 lg:w-[153px]" src="img/logo.svg" width="153" height="58" alt="Logo" />
+      <div class="container-wrap flex justify-between items-center">
+        <img
+          class="gs_reveal gs_reveal_fromLeft w-[90px] sm:w-28 md:w-32 lg:w-[153px]"
+          src="img/logo.svg"
+          width="153"
+          height="58"
+          alt="Logo"
+        />
 
-        <div class="flex items-center gap-x-6">
+        <div class="gs_reveal gs_reveal_fromRight flex items-center gap-x-6">
           <ul class="hidden md:flex gap-x-6">
             <li>
               <a class="hover:text-green-400 transition-colors duration-300" href="#">Log In</a>
@@ -25,117 +35,119 @@
             </li>
           </ul>
 
-          <button
-            class="bg-bgButton rounded-rBtn text-sm px-[15px] py-[10px] md:px-[18] md:py-[12px] lg:text-base lg:px-[25px] lg:py-[15px] lg:hover:bg-lime-600 transition-colors duration-300"
-          >
-            Get Started
-          </button>
+          <button class="button">Get Started</button>
         </div>
       </div>
     </header>
 
     <main>
       <section
-        class="pt-64 pb-14 bg-bgMain bg-[url('/img/hero-bg.svg')] bg-no-repeat bg-[length:320px] bg-[top] md:bg-[bottom_left_48vw] md:bg-contain md:pt-[120px] md:pb-[130px]"
+        class="pt-64 pb-14 bg-bgMain bg-[url('../img/hero-bg.svg')] bg-no-repeat bg-[length:320px] bg-[top] md:bg-[bottom_left_48vw] md:bg-contain md:pt-[120px] md:pb-[130px]"
       >
-        <div class="container px-[16px] mx-auto max-w-[1284px] md:px-[32px] lg:px-[52px]">
-          <h1 class="font-['Recoleta'] text-white text-3xl md:text-5xl max-w-[391px] mb-4">
+        <div class="container-wrap">
+          <h1 class="gs_reveal font-['Recoleta'] text-white text-3xl md:text-5xl max-w-[391px] mb-4">
             Running the show has never been so easy.
           </h1>
 
-          <p class="text-sm max-w-[475px] text-white md:text-base lg:text-lg">
+          <p class="gs_reveal text text-white max-w-[455px]">
             Ready to put the human back in HR? Clerksy helps you set the stage with an inclusive and compliant
             workplace.
           </p>
         </div>
       </section>
 
-      <section class="py-10 lg:py-[120px]">
-        <div class="container px-[16px] mx-auto max-w-[1284px] md:px-[32px] lg:px-[52px]">
+      <section class="text-[#163a24] py-10 lg:py-[120px]">
+        <div class="container-wrap">
           <div class="flex flex-col gap-2.5 justify-around items-center mb-10 md:flex-row">
-            <div class="relative max-w-[300px] h-[310px] lg:max-w-[492px] w-[100%] lg:h-[488px]">
-              <img
-                class="absolute bottom-0 w-[100%]"
-                src="img/women-bubble.svg"
-                width="492"
-                height="510"
-                alt="Bubble"
-              />
-              <img
-                class="absolute bottom-0 left-[50%] w-48 translate-x-[-50%] lg:w-[348px]"
-                src="img/women.svg"
-                width="348"
-                height="395"
-                alt="Women"
-              />
-            </div>
+            <img
+              class="gs_reveal gs_reveal_fromLeft image-left max-w-[300px] w-[100%] h-auto lg:max-w-[492px]"
+              src="img/women.svg"
+              width="492"
+              height="490"
+              alt="Women"
+            />
 
-            <div class="max-w-[374px] text-center md:text-left">
-              <h2 class="font-['Recoleta'] text-3xl mb-3 lg:text-5xl lg:mb-[27px]">Put the human back in HR.</h2>
+            <div class="gs_reveal gs_reveal_fromRight max-w-[374px]">
+              <h2 class="text-center title-h2 md:text-left">Put the human back in HR.</h2>
 
-              <p class="text-sm max-w-[475px] md:text-base lg:text-lg">
+              <p class="text-center text md:text-left">
                 Your employees are the real stars. Show the love and help them perform!
               </p>
             </div>
           </div>
 
-          <div class="flex flex-col-reverse gap-2.5 justify-around items-center md:flex-row">
-            <div class="max-w-[380px] text-center md:text-left">
-              <h2 class="font-['Recoleta'] text-3xl mb-3 lg:text-5xl lg:mb-[27px]">
-                You don’t have to play all the parts.
-              </h2>
+          <div class="flex-wrapper">
+            <div class="gs_reveal gs_reveal_fromLeft max-w-[380px] md:text-left">
+              <h2 class="text-center title-h2 md:text-left">You don’t have to play all the parts.</h2>
 
-              <p>
+              <p class="text-center text md:text-left">
                 Sales, accounting, HR&mdash; Oh&nbsp;My! You can&rsquo;t do&nbsp;it&nbsp;all&nbsp;&mdash; let Clerksy
                 help.
               </p>
             </div>
 
-            <div class="relative max-w-[300px] h-[258px] lg:max-w-[492px] w-[100%] lg:min-h-[423px]">
-              <img class="absolute bottom-0 w-[100%]" src="img/men-bubble.svg" width="488" height="419" alt="Bubble" />
-              <img
-                class="absolute bottom-0 left-[50%] translate-x-[-50%] w-[484px]"
-                src="img/men.svg"
-                width="484"
-                height="408"
-                alt="Men"
-              />
-            </div>
+            <img
+              class="gs_reveal gs_reveal_fromRight image-right max-w-[300px] w-[100%] h-auto lg:max-w-[492px]"
+              src="img/men.svg"
+              width="492"
+              height="423"
+              alt="Men"
+            />
           </div>
 
           <div class="pt-14 lg:pt-[113px]">
-            <h2 class="font-['Recoleta'] text-3xl mb-7 lg:text-5xl lg:mb-[66px] text-center">
+            <h2 class="gs_reveal font-['Recoleta'] text-3xl mb-7 lg:text-5xl lg:mb-[66px] text-center">
               We partner with the best
             </h2>
 
             <ul class="flex justify-evenly items-center gap-2.5 max-w-[983px] mx-auto">
               <li>
                 <a class="block hover:scale-110" href="#">
-                  <img src="img/stripe.png" width="110" height="51" alt="stripe" />
+                  <picture>
+                    <source srcset="img/stripe.avif" type="image/avif" />
+                    <source srcset="img/stripe.webp" type="image/webp" />
+                    <img src="img/stripe.png" width="110" height="51" alt="stripe" />
+                  </picture>
                 </a>
               </li>
 
               <li>
                 <a class="block hover:scale-110" href="#">
-                  <img src="img/google.png" width="110" height="36" alt="google" />
+                  <picture>
+                    <source srcset="img/google.avif" type="image/avif" />
+                    <source srcset="img/google.webp" type="image/webp" />
+                    <img src="img/google.png" width="110" height="36" alt="google" />
+                  </picture>
                 </a>
               </li>
 
               <li>
                 <a class="block hover:scale-110" href="#">
-                  <img src="img/notion.png" width="110" height="59" alt="notion" />
+                  <picture>
+                    <source srcset="img/notion.avif" type="image/avif" />
+                    <source srcset="img/notion.webp" type="image/webp" />
+                    <img src="img/notion.png" width="110" height="59" alt="notion" />
+                  </picture>
                 </a>
               </li>
 
               <li>
                 <a class="block hover:scale-110" href="#">
-                  <img src="img/gusto.png" width="110" height="45" alt="gusto" />
+                  <picture>
+                    <source srcset="img/gusto.avif" type="image/avif" />
+                    <source srcset="img/gusto.webp" type="image/webp" />
+                    <img src="img/gusto.png" width="110" height="45" alt="gusto" />
+                  </picture>
                 </a>
               </li>
 
               <li>
                 <a class="block hover:scale-110" href="#">
-                  <img src="img/aircall.png" width="110" height="37" alt="aircall" />
+                  <picture>
+                    <source srcset="img/aircall.avif" type="image/avif" />
+                    <source srcset="img/aircall.webp" type="image/webp" />
+                    <img src="img/aircall.png" width="110" height="37" alt="aircall" />
+                  </picture>
                 </a>
               </li>
             </ul>
@@ -144,8 +156,10 @@
       </section>
 
       <section class="pt-7 pb-8 bg-bgMain sm:pt-12 sm:pb-16 md:pt-16 md:pb-24 lg:pt-16 lg:pb-[120px]">
-        <div class="container px-[16px] mx-auto max-w-[1284px] md:px-[32px] lg:px-[52px]">
-          <h2 class="font-['Recoleta'] text-white text-3xl mb-10 text-center md:mb-16 lg:text-5xl lg:mb-[74px]">
+        <div class="container-wrap">
+          <h2
+            class="gs_reveal font-['Recoleta'] text-white text-3xl mb-10 text-center md:mb-16 lg:text-5xl lg:mb-[74px]"
+          >
             HR Production of the Highest Quality
           </h2>
 
@@ -153,28 +167,28 @@
             class="grid grid-cols-1 gap-y-8 justify-items-center sm:grid-cols-2 text-white text-center text-sm md:grid-cols-3 md:text-base lg:grid-cols-4 lg:text-lg"
           >
             <li
-              class="relative max-w-[295px] w-[100%] pt-[180px] before:absolute before:top-0 before:left-[50%] before:translate-x-[-50%] before:bg-[url('/img/informs.svg')] before:bg-no-repeat before:w-[117px] before:h-[145px]"
+              class="relative max-w-[295px] w-[100%] pt-[180px] before:absolute before:top-0 before:left-[50%] before:translate-x-[-50%] before:bg-[url('../img/informs.svg')] before:bg-no-repeat before:w-[117px] before:h-[145px]"
             >
               <p>Educates & Informs</p>
               <p>Employee Expectations</p>
             </li>
 
             <li
-              class="relative max-w-[295px] w-[100%] pt-[180px] before:absolute before:top-0 before:left-[50%] before:translate-x-[-50%] before:bg-[url('/img/protects.svg')] before:bg-no-repeat before:w-[79px] before:h-[160px]"
+              class="relative max-w-[295px] w-[100%] pt-[180px] before:absolute before:top-0 before:left-[50%] before:translate-x-[-50%] before:bg-[url('../img/protects.svg')] before:bg-no-repeat before:w-[79px] before:h-[160px]"
             >
               <p>Protects Your Business</p>
               <p>Just in Case</p>
             </li>
 
             <li
-              class="relative max-w-[295px] w-[100%] pt-[180px] before:absolute before:top-0 before:left-[50%] before:translate-x-[-50%] before:bg-[url('/img/stores.svg')] before:bg-no-repeat before:w-[66px] before:h-[145px]"
+              class="relative max-w-[295px] w-[100%] pt-[180px] before:absolute before:top-0 before:left-[50%] before:translate-x-[-50%] before:bg-[url('../img/stores.svg')] before:bg-no-repeat before:w-[66px] before:h-[145px]"
             >
               <p>Manages & Stores</p>
               <p>Important Documents</p>
             </li>
 
             <li
-              class="relative max-w-[295px] w-[100%] pt-[180px] before:absolute before:top-0 before:left-[50%] before:translate-x-[-50%] before:bg-[url('/img/healthy.svg')] before:bg-no-repeat before:w-[95px] before:h-[150px]"
+              class="relative max-w-[295px] w-[100%] pt-[180px] before:absolute before:top-0 before:left-[50%] before:translate-x-[-50%] before:bg-[url('../img/healthy.svg')] before:bg-no-repeat before:w-[95px] before:h-[150px]"
             >
               <p>Create a Healthy</p>
               <p>Work Environment</p>
@@ -184,23 +198,287 @@
       </section>
 
       <section class="pt-10 pb-12 bg-[#f2efe6] lg:pt-[114px] lg:pb-[135px]">
-        <div class="container px-[16px] mx-auto max-w-[1284px] md:px-[32px] lg:px-[52px]">
+        <div class="container-wrap">
           <h2
-            class="font-['Recoleta'] text-3xl mb-3 text-center max-w-[520px] mx-auto md:mb-6 lg:text-5xl lg:mb-[27px] lg:max-w-[739px]"
+            class="gs_reveal gs_reveal_fromLeft font-['Recoleta'] text-3xl mb-3 text-center max-w-[520px] mx-auto md:mb-6 lg:text-5xl lg:mb-[27px] lg:max-w-[739px]"
           >
             Employees come in all shapes and sizes. Find the right fit.
           </h2>
 
           <p
-            class="text-center text-sm mx-auto sm:max-w-[600px] md:text-base md:max-w-[700px] lg:text-lg lg:max-w-[760px]"
+            class="gs_reveal gs_reveal_fromRight text-center text-sm mx-auto sm:max-w-[600px] md:text-base md:max-w-[700px] lg:text-lg lg:max-w-[760px]"
           >
             Focus on casting and screening. Let Clerksy handle contracts, resolve any on set-conflicts and make sure you
             are compliant with work and safety boards.
           </p>
 
-          <img src="img/dancing.svg" width="1180" height="335" alt="dancing" />
+          <img class="gs_reveal" src="img/dancing.svg" width="1180" height="335" alt="dancing" />
+        </div>
+      </section>
+
+      <section class="pt-16 pb-8 md:pt-24 md:pb-12 lg:pt-40 lg:pb-14">
+        <div class="container-wrap">
+          <div class="flex-wrapper">
+            <div class="gs_reveal gs_reveal_fromLeft max-w-[370px]">
+              <h2 class="text-center title-h2 md:text-left">How the scenes fit together</h2>
+
+              <p class="text-center text md:text-left">
+                Employee Training & Development, Diversity & Inclusion Programs, and Conflict Resolution.
+              </p>
+            </div>
+
+            <img
+              class="gs_reveal gs_reveal_fromRight max-w-[300px] w-[100%] lg:max-w-[492px]"
+              src="img/girl.svg"
+              width="492"
+              height="423"
+              alt="girl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-8 pb-14 md:pt10 md:pb-20 lg:pt-14 lg:pb-28">
+        <div class="container-wrap">
+          <h2 class="gs_reveal text-center title-h2">Consider everyone's best interest</h2>
+
+          <p class="gs_reveal text-center mb-5 text">HR is for everyone. Clerksy can help you.</p>
+
+          <ul class="flex justify-center flex-wrap gap-10">
+            <li class="gs_reveal gs_reveal_fromLeft card-li">
+              <article
+                class="card before:absolute before:top-[50px] before:left-[40px] before:bg-[url('../img/protect.svg')] before:w-[62px] before:h-[75px]"
+              >
+                <h3 class="title-h3 max-w-[160px]">Protect Your Company</h3>
+                <ul class="card-list">
+                  <li class="">Compliance Audits & Training</li>
+                  <li class="">Employee Data Storage</li>
+                  <li class="">Policy Drafting</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="gs_reveal card-li">
+              <article
+                class="card before:absolute before:top-[50px] before:left-[40px] before:bg-[url('../img/star.svg')] before:w-[83px] before:h-[75px]"
+              >
+                <h3 class="title-h3">Set Your Employees Up For Success</h3>
+                <ul class="card-list">
+                  <li class="">Learning & Development</li>
+                  <li class="">Employee Relations</li>
+                  <li class="">Benefit Management</li>
+                  <li class="">Employee Performance</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="gs_reveal gs_reveal_fromRight card-li">
+              <article
+                class="card before:absolute before:top-[50px] before:left-[40px] before:bg-[url('../img/search.svg')] before:w-[82px] before:h-[75px]"
+              >
+                <h3 class="title-h3">Know Your Industry's Legal Landscape</h3>
+                <ul class="card-list">
+                  <li class="">Work Place Investigations</li>
+                  <li class="">Employee Mediations</li>
+                  <li class="">Performance Tracking</li>
+                </ul>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="bg-[#f2efe6] py-10 md:py-20 lg:py-28">
+        <div class="container-wrap">
+          <h2 class="gs_reveal text-center title-h2">It's easy as 1, 2, 3</h2>
+          <p class="gs_reveal text-center mb-4 text">Clerksy can help use your unique business needs. Here's how:</p>
+
+          <ul class="flex justify-around flex-wrap gap-2.5">
+            <li class="card-item after:bg-[url('../img/arrow-1.svg')]">
+              <article class="max-w-[260px]">
+                <p class="text-center text">Fill out a form and tell us what you're looking for:</p>
+
+                <span class="text-span">5 minutes</span>
+              </article>
+            </li>
+
+            <li class="card-item after:bg-[url('../img/arrow-2.svg')]">
+              <article class="max-w-[260px]">
+                <p class="text-center text">Time it will take a Clerksy rep to follow up:</p>
+
+                <span class="text-span">24 hours</span>
+              </article>
+            </li>
+
+            <li
+              class="relative p-[42px_35px_45px] max-w-[365px] after:absolute after:bg-[url('../img/outline.svg')] after:w-[290px] after:h-[183px] after:top-0 after:left-0 after:right-0 after:bottom-0 after:bg-no-repeat"
+            >
+              <article class="max-w-[260px]">
+                <p class="text-center max-w-[220px] text">Take advantage of our monthly plans starting at:</p>
+
+                <span class="text-span">$969 USD</span>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="py-8 md:py-12 lg:py-28">
+        <div class="container-wrap">
+          <div class="flex-wrapper">
+            <div class="gs_reveal gs_reveal_fromLeft max-w-[370px]">
+              <h2 class="text-center title-h2 md:text-left">Not just another HR resource.</h2>
+
+              <p class="text-center mb-5 text md:text-left">Simple. Entertaining. Informative.</p>
+
+              <button class="button block mx-auto text-white md:mx-0">Download E-book</button>
+            </div>
+
+            <img
+              class="gs_reveal gs_reveal_fromRight max-w-[300px] w-[100%] lg:max-w-[492px]"
+              src="img/book.svg"
+              loading="lazy"
+              width="491"
+              height="488"
+              alt="girl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="relative before-bg after-bg bg-bgMain pt-10 pb-16 md:pt-20 md:pb-24 lg:pt-28 lg:pb-32">
+        <div class="relative z-10 container-wrap">
+          <h2 class="gs_reveal gs_reveal_fromLeft text-center text-white title-h2">Get Started With Clerksy</h2>
+
+          <p class="gs_reveal gs_reveal_fromRight text-center text-white text mb-5">
+            Make sure your business puts people first.
+          </p>
+
+          <button
+            class="gs_reveal block mx-auto bg-[#fab5a0] rounded-rBtn text-sm px-[15px] py-[10px] md:px-[18] md:py-[12px] lg:text-base lg:px-[25px] lg:py-[15px] lg:hover:bg-pink-300 transition-colors duration-300"
+          >
+            Book a Free Discovery Call
+          </button>
+        </div>
+      </section>
+
+      <section class="bg-[#f2efe6] py-8 md:py-12 lg:py-28">
+        <div
+          class="container flex flex-wrap justify-center md:justify-between gap-2.5 px-[16px] mx-auto max-w-[1284px] md:px-[32px] lg:px-[52px]"
+        >
+          <div class="gs_reveal gs_reveal_fromLeft">
+            <h2 class="text-center title-h2 md:text-left">Stay up to date!</h2>
+
+            <p class="text-center text md:text-left">Sign up for the latest Clerksy news.</p>
+          </div>
+
+          <div class="gs_reveal gs_reveal_fromRight md:max-w-[430px] lg:max-w-[570px]">
+            <form class="relative mb-2.5">
+              <input
+                class="w-[100%] h-[40px] md:h-[44px] lg:h-[54px] border border-solid border-[#f2efe6] rounded-[255px] p-[15px_130px_15px_20px]"
+                type="text"
+              />
+              <button class="absolute top-0 right-0 button text-white" type="submit">Sign Up</button>
+            </form>
+
+            <p class="text-sm">
+              By submitting your email you agree to receive updates about Clerksy. You can unsubscribe at any time. View
+              our full
+              <a class="text-[#198c36]" href="#">Privacy Policy</a>
+            </p>
+          </div>
         </div>
       </section>
     </main>
+
+    <footer class="pt-10">
+      <div class="container-wrap">
+        <div class="flex justify-between items-center flex-col gap-2.5 mb-10 md:flex-row">
+          <img class="gs_reveal gs_reveal_fromLeft" src="img/logo-footer.svg" width="110" height="42" alt="Logo" />
+
+          <h2 class="gs_reveal font-['Recoleta'] text-2xl text-[#163a24]">A people company.</h2>
+
+          <ul class="gs_reveal gs_reveal_fromRight flex items-center gap-3.5">
+            <li class="">
+              <a class="block text-[#198c36] hover:text-lime-600 hover:scale-110 transition-all duration-300" href="#">
+                <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.6266 3.98062H13V0.168814C12.5905 0.116871 11.1823 0 9.54229 0C6.12032 0 3.77619 1.98482 3.77619 5.6328V8.99011H0V13.2514H3.77619V23.9736H8.40597V13.2524H12.0294L12.6046 8.99111H8.40488V6.05534C8.40597 4.82369 8.7656 3.98062 10.6266 3.98062Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="">
+              <a class="block text-[#198c36] hover:text-lime-600 hover:scale-110 transition-all duration-300" href="#">
+                <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M30 5.25392C28.8844 5.70514 27.6956 6.00423 26.4562 6.14945C27.7312 5.44754 28.7044 4.34456 29.1619 3.01509C27.9731 3.66859 26.6606 4.13018 25.2619 4.38778C24.1331 3.2796 22.5244 2.59326 20.7694 2.59326C17.3644 2.59326 14.6231 5.14154 14.6231 8.26552C14.6231 8.71502 14.6644 9.14722 14.7656 9.55868C9.6525 9.32875 5.12813 7.06918 2.08875 3.6271C1.55812 4.47595 1.24688 5.44754 1.24688 6.49348C1.24688 8.45742 2.34375 10.1983 3.97875 11.2062C2.99062 11.189 2.02125 10.9244 1.2 10.5078C1.2 10.5251 1.2 10.5476 1.2 10.57C1.2 13.3258 3.33187 15.6147 6.1275 16.142C5.62687 16.2682 5.08125 16.3287 4.515 16.3287C4.12125 16.3287 3.72375 16.308 3.35062 16.2319C4.1475 18.4777 6.40875 20.1287 9.0975 20.1823C7.005 21.6915 4.34812 22.6009 1.47188 22.6009C0.9675 22.6009 0.48375 22.5802 0 22.5231C2.72438 24.143 5.95312 25.0679 9.435 25.0679C20.7525 25.0679 26.94 16.4238 26.94 8.93112C26.94 8.68044 26.9306 8.43841 26.9175 8.1981C28.1381 7.39938 29.1637 6.40185 30 5.25392Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="">
+              <a class="block text-[#198c36] hover:text-lime-600 hover:scale-110 transition-all duration-300" href="#">
+                <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M25.6055 0H4.39453C1.97159 0 0 1.81788 0 4.05192V23.6092C0 25.8433 1.97159 27.6611 4.39453 27.6611H25.6055C28.0284 27.6611 30 25.8433 30 23.6092V4.05192C30 1.81788 28.0284 0 25.6055 0ZM10.6055 21.9344H7.08984V10.589H10.6055V21.9344ZM10.6055 8.96826H7.08984V5.72672H10.6055V8.96826ZM22.9102 21.9344H19.3945V15.4513C19.3945 14.5578 18.6058 13.8306 17.6367 13.8306C16.6676 13.8306 15.8789 14.5578 15.8789 15.4513V21.9344H12.3633V10.589H15.8789V11.2C16.7999 10.936 17.3982 10.589 18.5156 10.589C20.8999 10.5913 22.9102 12.5635 22.9102 14.8942V21.9344Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="">
+              <a class="block text-[#198c36] hover:text-lime-600 hover:scale-110 transition-all duration-300" href="#">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.3379 0H3.66211C1.64299 0 0 1.64299 0 3.66211V21.3379C0 23.357 1.64299 25 3.66211 25H21.3379C23.357 25 25 23.357 25 21.3379V3.66211C25 1.64299 23.357 0 21.3379 0ZM12.5488 19.043C8.91399 19.043 5.95703 16.086 5.95703 12.4512C5.95703 8.81634 8.91399 5.85938 12.5488 5.85938C16.1837 5.85938 19.1406 8.81634 19.1406 12.4512C19.1406 16.086 16.1837 19.043 12.5488 19.043ZM19.873 7.32422C18.6615 7.32422 17.6758 6.3385 17.6758 5.12695C17.6758 3.91541 18.6615 2.92969 19.873 2.92969C21.0846 2.92969 22.0703 3.91541 22.0703 5.12695C22.0703 6.3385 21.0846 7.32422 19.873 7.32422Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M19.873 4.39453C19.4689 4.39453 19.1406 4.72279 19.1406 5.12695C19.1406 5.53112 19.4689 5.85938 19.873 5.85938C20.2772 5.85938 20.6055 5.53112 20.6055 5.12695C20.6055 4.72279 20.2772 4.39453 19.873 4.39453Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M12.5488 7.32422C9.72214 7.32422 7.42188 9.62448 7.42188 12.4512C7.42188 15.2779 9.72214 17.5781 12.5488 17.5781C15.3755 17.5781 17.6758 15.2779 17.6758 12.4512C17.6758 9.62448 15.3755 7.32422 12.5488 7.32422Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="flex justify-between gap-2.5 border-t py-6 flex-col items-center text-[12px] sm:text-sm lg:flex-row"
+        >
+          <p class="gs_reveal gs_reveal_fromLeft text-[#163a24] text-center">
+            &copy; 2020 Clerksy, Inc. Clerksy is a registered trademark of Clerksy, Inc.
+          </p>
+
+          <ul class="gs_reveal gs_reveal_fromRight flex flex-col items-center gap-3.5 text-[#198c36] sm:flex-row">
+            <li class="">
+              <a class="hover:text-[#51a551]" href="#">Privacy Policy</a>
+            </li>
+            <li class="">
+              <a class="hover:text-[#51a551]" href="#">Terms of Service</a>
+            </li>
+            <li class="">
+              <a class="hover:text-[#51a551]" href="#">GDPR</a>
+            </li>
+            <li class="">
+              <a class="hover:text-[#51a551]" href="#">Careers</a>
+            </li>
+            <li class="">
+              <a class="hover:text-[#51a551]" href="#">Press Kit</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
